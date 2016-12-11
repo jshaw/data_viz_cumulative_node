@@ -6,8 +6,11 @@ var PubNub = require('pubnub');
 var globalSweepData = [];
 var sweepData = [];
 
-var saveFrequency = 60000;
-var saveAccumulativeFrequency = 600000;
+// var saveFrequency = 60000;
+// var saveAccumulativeFrequency = 600000;
+
+var saveFrequency = 15000;
+var saveAccumulativeFrequency = 30000;
 
 var clearGlobalDataAfterSave = false;
 
@@ -46,7 +49,6 @@ function parseData(data){
 }
 
 function stringToObject(str){
-    // console.log(str);
     var tmp_array = _.split(str, ':');
     
     // console.log(_.indexOf(tmp_array, '\r'));
@@ -83,13 +85,11 @@ function logFullObject(){
     console.log("globalSweepData: ", globalSweepData);
 }
 
-function saveJSONFileHandler(err){
-    console.log(arguments);
-
+function saveJSONFileHandler(savedFrom, err){
     if(err){
         console.error(err);
     } else {
-        console.error("SAVED");
+        console.log("SAVED from: " + savedFrom);
     }
 
     // if we want to clear the global sweep value after each save
@@ -100,26 +100,26 @@ function saveJSONFileHandler(err){
     
 }
 
-var interval_handler = _.bind(intervalHandler, this);
+var interval_handler = _.bind(intervalHandler);
 var interval = setInterval(interval_handler, saveFrequency);
 
 function intervalHandler(){
     var tm_stamp = Date.now();
     var file = './output/sweep_' + tm_stamp + '.json';
 
-    var save_json_handler = _.bind(saveJSONFileHandler, this);
+    var save_json_handler = _.bind(saveJSONFileHandler, this, 'itterative');
     jsonfile.writeFile(file, globalSweepData, {flag: 'w'}, save_json_handler);
 }
 
-var interval_accumulative_handler = _.bind(intervalAccumulativeHandler, this);
+var interval_accumulative_handler = _.bind(intervalAccumulativeHandler);
 var interval = setInterval(interval_accumulative_handler, saveAccumulativeFrequency);
 
 function intervalAccumulativeHandler(){
     var tm_stamp = Date.now();
     var file_accumulative = './output/accumulative/sweep_' + tm_stamp + '.json';
 
-    var save_json_accumulative_handler = _.bind(saveJSONFileHandler, this);
-    jsonfile.writeFile(file, globalSweepData, {flag: 'w'}, save_json_accumulative_handler);
+    var save_json_accumulative_handler = _.bind(saveJSONFileHandler, this, 'accumulative');
+    jsonfile.writeFile(file_accumulative, globalSweepData, {flag: 'w'}, save_json_accumulative_handler);
 }
 
 function publish() {
@@ -161,3 +161,18 @@ function publish() {
 };
 
 publish();
+
+
+function bindTest(){
+    var bind_handler = _.bind(bindIntervalHandler, this, "blahhhh");
+    var interval = setInterval(bind_handler, 1000);
+
+    function bindIntervalHandler(passed_in){
+        console.log(arguments);
+        console.log("console.log(passed_in): ", passed_in);
+    }
+}
+
+// bindTest();
+
+
