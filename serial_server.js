@@ -6,10 +6,13 @@ var PubNub = require('pubnub');
 var globalSweepData = [];
 var sweepData = [];
 
-var saveFrequency = 30000;
+var saveFrequency = 60000;
+var saveAccumulativeFrequency = 600000;
+
+var clearGlobalDataAfterSave = false;
+
 jsonfile.spaces = 4
 
-// var data_handler = _(parseData).bind(this);
 var data_handler = _.bind(parseData, this);
 
 var port = new SerialPort('/dev/cu.usbmodem1451', {
@@ -25,9 +28,6 @@ var port = new SerialPort('/dev/cu.usbmodem1451', {
         }
         console.log('message written');
     });
-    // port.on('data', function(data) {
-    //     console.log(data);
-    // });
     port.on('data', data_handler); 
 });
 
@@ -61,7 +61,6 @@ function stringToObject(str){
             'dst': tmp_array[2].replace(/(?:\\[rn]|[\r\n]+)+/g, "")
         };
 
-        // sweepData = sweepData.push(scan_tmp_object);
         sweepData.push(scan_tmp_object);
     }
 }
@@ -86,33 +85,41 @@ function logFullObject(){
 
 function saveJSONFileHandler(err){
     console.log(arguments);
-    console.error(err);
-    clearGlobalSweep();
+
+    if(err){
+        console.error(err);
+    } else {
+        console.error("SAVED");
+    }
+
+    // if we want to clear the global sweep value after each save
+    // we generally don't want this because we want the accumulative data of all of the measurements over time
+    if(clearGlobalDataAfterSave == true){
+        clearGlobalSweep();
+    }
+    
 }
 
 var interval_handler = _.bind(intervalHandler, this);
 var interval = setInterval(interval_handler, saveFrequency);
-// clearInterval(interval);
 
 function intervalHandler(){
-    console.log("here???");
-
-
     var tm_stamp = Date.now();
-
     var file = './output/sweep_' + tm_stamp + '.json';
 
     var save_json_handler = _.bind(saveJSONFileHandler, this);
     jsonfile.writeFile(file, globalSweepData, {flag: 'w'}, save_json_handler);
+}
 
-    //     function (err) {
-    //     console.error(err);
-    // });
+var interval_accumulative_handler = _.bind(intervalAccumulativeHandler, this);
+var interval = setInterval(interval_accumulative_handler, saveAccumulativeFrequency);
 
-    // jsonfile.writeFile(file, obj, function (err) {
-    //     console.error(err);
-    // });
+function intervalAccumulativeHandler(){
+    var tm_stamp = Date.now();
+    var file_accumulative = './output/accumulative/sweep_' + tm_stamp + '.json';
 
+    var save_json_accumulative_handler = _.bind(saveJSONFileHandler, this);
+    jsonfile.writeFile(file, globalSweepData, {flag: 'w'}, save_json_accumulative_handler);
 }
 
 function publish() {
