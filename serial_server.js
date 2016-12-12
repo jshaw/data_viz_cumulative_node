@@ -6,15 +6,16 @@ var PubNub = require('pubnub');
 var globalSweepData = [];
 var sweepData = [];
 
-// var saveFrequency = 60000;
+var saveFrequency = 60000;
 // var saveAccumulativeFrequency = 600000;
+var saveAccumulativeFrequency = 300000;
 
-var saveFrequency = 15000;
-var saveAccumulativeFrequency = 30000;
+// var saveFrequency = 15000;
+// var saveAccumulativeFrequency = 30000;
 
 var clearGlobalDataAfterSave = false;
 
-jsonfile.spaces = 4
+jsonfile.spaces = 4;
 
 var data_handler = _.bind(parseData, this);
 
