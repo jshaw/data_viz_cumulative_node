@@ -8,7 +8,7 @@ var max = 180;
 var height = 120;
 var length = 160;
 
-var deg_map = {};
+var deg_map = [];
 
 for(var i = 0; i <= max; i++){
     var rad_conversion = deg_to_rads(deg);
@@ -16,7 +16,7 @@ for(var i = 0; i <= max; i++){
 
     if(deg <= 53){
         answr = height/Math.cos(rad_conversion);
-    } else if (deg <= 89) {
+    } else if (deg > 53 && deg <= 89) {
         var hypth = height / Math.cos(rad_conversion);
         console.log("hypth ", hypth);
 
@@ -32,13 +32,10 @@ for(var i = 0; i <= max; i++){
         var dis_to_wall = hypth - small_hypth;
 
         answr = dis_to_wall;
-    }
-
-    if(deg == 90){
+    } else if(deg == 90){
+        // set the new height of the triangle the second half of the 180 deg.
         height = 124;
-    }
-
-    if(deg > 90 && deg <= 38){
+    } else if(deg > 90 && deg <= 128){
         var hypth = height / Math.cos(rad_conversion);
         console.log("hypth ", hypth);
 
@@ -54,13 +51,21 @@ for(var i = 0; i <= max; i++){
         var dis_to_wall = hypth - small_hypth;
 
         answr = Math.abs(dis_to_wall);
-    } else if (deg > 39) {
+    } else if (deg > 128) {
         answr = Math.abs(height/Math.cos(rad_conversion));
     }
 
     
     console.log("degrees: " + deg + " distance: " + Math.round(answr));
-    deg_map[deg] = Math.round(answr);
+    // deg_map[deg] = Math.round(answr);
+
+    var tmp_obj = {
+        ang: deg,
+        dst: Math.round(answr)
+    }
+
+    deg_map.push(tmp_obj);
+
     deg++;
 
     console.log(" ");
