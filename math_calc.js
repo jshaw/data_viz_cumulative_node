@@ -1,11 +1,14 @@
+var jsonfile = require('jsonfile')
+jsonfile.spaces = 4;
+
 var deg = 0;
 var inc = 10;
-var max = 89;
+// var max = 89;
+var max = 180;
 var height = 120;
 var length = 160;
 
 var deg_map = {};
-
 
 for(var i = 0; i <= max; i++){
     var rad_conversion = deg_to_rads(deg);
@@ -13,7 +16,7 @@ for(var i = 0; i <= max; i++){
 
     if(deg <= 53){
         answr = height/Math.cos(rad_conversion);
-    } else if (deg <= max) {
+    } else if (deg <= 89) {
         var hypth = height / Math.cos(rad_conversion);
         console.log("hypth ", hypth);
 
@@ -29,7 +32,7 @@ for(var i = 0; i <= max; i++){
         var dis_to_wall = hypth - small_hypth;
 
         answr = dis_to_wall;
-    } else if ()
+    }
 
     if(deg == 90){
         height = 124;
@@ -50,9 +53,9 @@ for(var i = 0; i <= max; i++){
 
         var dis_to_wall = hypth - small_hypth;
 
-        answr = dis_to_wall;
+        answr = Math.abs(dis_to_wall);
     } else if (deg > 39) {
-        answr = height/Math.cos(rad_conversion);
+        answr = Math.abs(height/Math.cos(rad_conversion));
     }
 
     
@@ -63,6 +66,8 @@ for(var i = 0; i <= max; i++){
     console.log(" ");
 }
 
+saveProcessedData();
+
 function deg_to_rads(deg){
     var rad_c = deg * (Math.PI/180);
     return rad_c;
@@ -72,4 +77,16 @@ function deg_difference(deg){
     return 180 - (90 + deg);
 }
 
-console.log(deg_map);
+function saveProcessedData(){
+    console.log(deg_map);
+
+    var file = './output/processed/physical_degree_map.json';
+
+    jsonfile.writeFile(file, deg_map, function (err) {
+        if(err){
+            console.error(err);
+        } else {
+            console.log("success saving degree map for physical space: " + file);
+        }
+    });
+}
