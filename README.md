@@ -1,5 +1,7 @@
 # data_viz_cumulative_node
 
+This is the repo for the Node.js code that reads and handles the data being sent from an Arduino Micro, an ultrasonic sensor and a servo motor. The repo to collect the data from the physical world is located in the [data_viz_cumulative_error](https://github.com/jshaw/data_viz_cumulative_error) project.
+
 ##### serial_server.js
 
 This script controls the servo motor and also reads the data being scanned by the ultrasonic sensor. The file also stores the data into a json array and saves two incremently files, one every minute and every 5 minutes. Every minute it saves the data from the previous minute and  every 5 minutes it saves an accumulation of all of the data points.
