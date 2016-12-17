@@ -5,6 +5,7 @@ jsonfile.spaces = 4;
 
 var globalSweepData = [];
 var sweepData = [];
+var physical_degree_map;
 var obj_size;
 
 
@@ -31,8 +32,11 @@ var data_load_handler = _.bind(parseData, this);
 
 // full
 var file = './output/accumulative/sweep_1481490007803.json';
-
 jsonfile.readFile(file, data_load_handler);
+
+var data_map_handler = _.bind(dataMapHandler, this);
+var file = './output/processed/physical_degree_map.json';
+jsonfile.readFile(file, data_map_handler);
 
 function parseData(err, obj){
     // console.log(arguments);
@@ -41,6 +45,9 @@ function parseData(err, obj){
 
     var data_obj_handler = _.bind(dataProcessing, this);
     _.forEach(obj, data_obj_handler);
+
+    var data_difference_handler = _.bind(calculateMeasurementDifference, this);
+    _.forEach(combined_values, data_difference_handler);
 
     saveProcessedData();
 
@@ -90,9 +97,23 @@ function calculateMean(){
 }
 
 function calculateMeanHandler(obj){
-
     obj.mean = Math.round( (obj.sum*1) / (obj.count*1) );
-    
+}
+
+function calculateMeasurementDifference(obj){
+    // console.log("--------------//////",  physical_degree_map);
+    if(typeof obj != 'undefined'){
+        // console.log("-> ", obj);
+        var physical_dist = _.find(physical_degree_map, { 'ang': (obj.ang * 1)});
+        console.log("physical_dist: ", physical_dist);
+        obj.diff = Math.abs(obj.mean - physical_dist.dst);
+    }
+}
+
+function dataMapHandler(err, obj){
+    console.log(arguments);
+    console.log("--------->", physical_degree_map);
+    physical_degree_map = obj;
 }
 
 function saveProcessedData(){

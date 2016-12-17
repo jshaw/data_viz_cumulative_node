@@ -3,546 +3,637 @@
         "ang": 0,
         "count": 461,
         "sum": 67166,
-        "mean": 146
+        "mean": 146,
+        "diff": 26
     },
     {
         "ang": 2,
         "count": 1250,
         "sum": 147161,
-        "mean": 118
+        "mean": 118,
+        "diff": 2
     },
     {
         "ang": 4,
         "count": 1167,
         "sum": 142098,
-        "mean": 122
+        "mean": 122,
+        "diff": 2
     },
     {
         "ang": 6,
         "count": 1204,
         "sum": 141997,
-        "mean": 118
+        "mean": 118,
+        "diff": 3
     },
     {
         "ang": 8,
         "count": 1190,
         "sum": 149186,
-        "mean": 125
+        "mean": 125,
+        "diff": 4
     },
     {
         "ang": 10,
         "count": 1172,
         "sum": 135203,
-        "mean": 115
+        "mean": 115,
+        "diff": 7
     },
     {
         "ang": 12,
         "count": 1206,
         "sum": 159857,
-        "mean": 133
+        "mean": 133,
+        "diff": 10
     },
     {
         "ang": 14,
         "count": 1144,
         "sum": 129408,
-        "mean": 113
+        "mean": 113,
+        "diff": 11
     },
     {
         "ang": 16,
         "count": 1180,
         "sum": 139223,
-        "mean": 118
+        "mean": 118,
+        "diff": 7
     },
     {
         "ang": 18,
         "count": 1090,
         "sum": 131653,
-        "mean": 121
+        "mean": 121,
+        "diff": 5
     },
     {
         "ang": 20,
         "count": 1174,
         "sum": 140954,
-        "mean": 120
+        "mean": 120,
+        "diff": 8
     },
     {
         "ang": 22,
         "count": 1095,
         "sum": 127349,
-        "mean": 116
+        "mean": 116,
+        "diff": 13
     },
     {
         "ang": 24,
         "count": 1151,
         "sum": 149641,
-        "mean": 130
+        "mean": 130,
+        "diff": 1
     },
     {
         "ang": 26,
         "count": 1164,
         "sum": 157030,
-        "mean": 135
+        "mean": 135,
+        "diff": 1
     },
     {
         "ang": 28,
         "count": 1141,
         "sum": 169191,
-        "mean": 148
+        "mean": 148,
+        "diff": 12
     },
     {
         "ang": 30,
         "count": 1167,
         "sum": 192908,
-        "mean": 165
+        "mean": 165,
+        "diff": 26
     },
     {
         "ang": 32,
         "count": 1224,
         "sum": 205246,
-        "mean": 168
+        "mean": 168,
+        "diff": 26
     },
     {
         "ang": 34,
         "count": 1173,
         "sum": 205674,
-        "mean": 175
+        "mean": 175,
+        "diff": 30
     },
     {
         "ang": 36,
         "count": 1145,
         "sum": 192561,
-        "mean": 168
+        "mean": 168,
+        "diff": 20
     },
     {
         "ang": 38,
         "count": 1219,
         "sum": 218163,
-        "mean": 179
+        "mean": 179,
+        "diff": 27
     },
     {
         "ang": 40,
         "count": 1178,
         "sum": 207797,
-        "mean": 176
+        "mean": 176,
+        "diff": 19
     },
     {
         "ang": 42,
         "count": 1193,
         "sum": 207321,
-        "mean": 174
+        "mean": 174,
+        "diff": 13
     },
     {
         "ang": 44,
         "count": 1186,
         "sum": 206090,
-        "mean": 174
+        "mean": 174,
+        "diff": 7
     },
     {
         "ang": 46,
         "count": 1202,
         "sum": 213937,
-        "mean": 178
+        "mean": 178,
+        "diff": 5
     },
     {
         "ang": 48,
         "count": 1182,
         "sum": 210964,
-        "mean": 178
+        "mean": 178,
+        "diff": 1
     },
     {
         "ang": 50,
         "count": 1182,
         "sum": 195099,
-        "mean": 165
+        "mean": 165,
+        "diff": 22
     },
     {
         "ang": 52,
         "count": 1226,
         "sum": 205005,
-        "mean": 167
+        "mean": 167,
+        "diff": 28
     },
     {
         "ang": 54,
         "count": 1191,
         "sum": 190424,
-        "mean": 160
+        "mean": 160,
+        "diff": 38
     },
     {
         "ang": 56,
         "count": 1226,
         "sum": 195922,
-        "mean": 160
+        "mean": 160,
+        "diff": 33
     },
     {
         "ang": 58,
         "count": 1179,
         "sum": 180716,
-        "mean": 153
+        "mean": 153,
+        "diff": 36
     },
     {
         "ang": 60,
         "count": 1273,
         "sum": 193342,
-        "mean": 152
+        "mean": 152,
+        "diff": 33
     },
     {
         "ang": 62,
         "count": 1140,
         "sum": 176930,
-        "mean": 155
+        "mean": 155,
+        "diff": 26
     },
     {
         "ang": 64,
         "count": 1203,
         "sum": 186137,
-        "mean": 155
+        "mean": 155,
+        "diff": 23
     },
     {
         "ang": 66,
         "count": 1177,
         "sum": 181210,
-        "mean": 154
+        "mean": 154,
+        "diff": 21
     },
     {
         "ang": 68,
         "count": 1195,
         "sum": 178947,
-        "mean": 150
+        "mean": 150,
+        "diff": 23
     },
     {
         "ang": 70,
         "count": 1191,
         "sum": 180575,
-        "mean": 152
+        "mean": 152,
+        "diff": 18
     },
     {
         "ang": 72,
         "count": 1226,
         "sum": 188442,
-        "mean": 154
+        "mean": 154,
+        "diff": 14
     },
     {
         "ang": 74,
         "count": 1247,
         "sum": 189166,
-        "mean": 152
+        "mean": 152,
+        "diff": 14
     },
     {
         "ang": 76,
         "count": 1151,
         "sum": 178871,
-        "mean": 155
+        "mean": 155,
+        "diff": 10
     },
     {
         "ang": 78,
         "count": 1249,
         "sum": 189430,
-        "mean": 152
+        "mean": 152,
+        "diff": 12
     },
     {
         "ang": 80,
         "count": 1172,
         "sum": 176649,
-        "mean": 151
+        "mean": 151,
+        "diff": 11
     },
     {
         "ang": 82,
         "count": 1193,
         "sum": 180364,
-        "mean": 151
+        "mean": 151,
+        "diff": 11
     },
     {
         "ang": 84,
         "count": 1200,
         "sum": 181805,
-        "mean": 152
+        "mean": 152,
+        "diff": 9
     },
     {
         "ang": 86,
         "count": 1186,
         "sum": 176145,
-        "mean": 149
+        "mean": 149,
+        "diff": 11
     },
     {
         "ang": 88,
         "count": 1218,
         "sum": 186127,
-        "mean": 153
+        "mean": 153,
+        "diff": 7
     },
     {
         "ang": 90,
         "count": 1194,
         "sum": 182499,
-        "mean": 153
+        "mean": 153,
+        "diff": 153
     },
     {
         "ang": 92,
         "count": 1212,
         "sum": 186742,
-        "mean": 154
+        "mean": 154,
+        "diff": 6
     },
     {
         "ang": 94,
         "count": 1148,
         "sum": 173685,
-        "mean": 151
+        "mean": 151,
+        "diff": 9
     },
     {
         "ang": 96,
         "count": 1177,
         "sum": 182342,
-        "mean": 155
+        "mean": 155,
+        "diff": 6
     },
     {
         "ang": 98,
         "count": 1163,
         "sum": 182958,
-        "mean": 157
+        "mean": 157,
+        "diff": 5
     },
     {
         "ang": 100,
         "count": 1170,
         "sum": 179025,
-        "mean": 153
+        "mean": 153,
+        "diff": 9
     },
     {
         "ang": 102,
         "count": 1163,
         "sum": 187181,
-        "mean": 161
+        "mean": 161,
+        "diff": 3
     },
     {
         "ang": 104,
         "count": 1151,
         "sum": 179632,
-        "mean": 156
+        "mean": 156,
+        "diff": 9
     },
     {
         "ang": 106,
         "count": 1122,
         "sum": 180614,
-        "mean": 161
+        "mean": 161,
+        "diff": 5
     },
     {
         "ang": 108,
         "count": 1120,
         "sum": 184760,
-        "mean": 165
+        "mean": 165,
+        "diff": 3
     },
     {
         "ang": 110,
         "count": 1175,
         "sum": 192316,
-        "mean": 164
+        "mean": 164,
+        "diff": 6
     },
     {
         "ang": 112,
         "count": 1110,
         "sum": 186627,
-        "mean": 168
+        "mean": 168,
+        "diff": 5
     },
     {
         "ang": 114,
         "count": 1177,
         "sum": 198402,
-        "mean": 169
+        "mean": 169,
+        "diff": 6
     },
     {
         "ang": 116,
         "count": 1169,
         "sum": 215274,
-        "mean": 184
+        "mean": 184,
+        "diff": 6
     },
     {
         "ang": 118,
         "count": 1152,
         "sum": 209711,
-        "mean": 182
+        "mean": 182,
+        "diff": 1
     },
     {
         "ang": 120,
         "count": 1098,
         "sum": 207442,
-        "mean": 189
+        "mean": 189,
+        "diff": 4
     },
     {
         "ang": 122,
         "count": 1156,
         "sum": 210101,
-        "mean": 182
+        "mean": 182,
+        "diff": 7
     },
     {
         "ang": 124,
         "count": 1116,
         "sum": 212572,
-        "mean": 190
+        "mean": 190,
+        "diff": 3
     },
     {
         "ang": 126,
         "count": 1100,
         "sum": 207195,
-        "mean": 188
+        "mean": 188,
+        "diff": 10
     },
     {
         "ang": 128,
         "count": 1140,
         "sum": 215349,
-        "mean": 189
+        "mean": 189,
+        "diff": 14
     },
     {
         "ang": 130,
         "count": 1040,
         "sum": 199018,
-        "mean": 191
+        "mean": 191,
+        "diff": 2
     },
     {
         "ang": 132,
         "count": 1083,
         "sum": 199845,
-        "mean": 185
+        "mean": 185,
+        "diff": 0
     },
     {
         "ang": 134,
         "count": 849,
         "sum": 156810,
-        "mean": 185
+        "mean": 185,
+        "diff": 6
     },
     {
         "ang": 136,
         "count": 765,
         "sum": 140474,
-        "mean": 184
+        "mean": 184,
+        "diff": 12
     },
     {
         "ang": 138,
         "count": 797,
         "sum": 145126,
-        "mean": 182
+        "mean": 182,
+        "diff": 15
     },
     {
         "ang": 140,
         "count": 897,
         "sum": 141724,
-        "mean": 158
+        "mean": 158,
+        "diff": 4
     },
     {
         "ang": 142,
         "count": 1089,
         "sum": 153731,
-        "mean": 141
+        "mean": 141,
+        "diff": 16
     },
     {
         "ang": 144,
         "count": 1058,
         "sum": 142257,
-        "mean": 134
+        "mean": 134,
+        "diff": 19
     },
     {
         "ang": 146,
         "count": 1262,
         "sum": 176686,
-        "mean": 140
+        "mean": 140,
+        "diff": 10
     },
     {
         "ang": 148,
         "count": 1133,
         "sum": 145071,
-        "mean": 128
+        "mean": 128,
+        "diff": 18
     },
     {
         "ang": 150,
         "count": 1183,
         "sum": 148679,
-        "mean": 126
+        "mean": 126,
+        "diff": 17
     },
     {
         "ang": 152,
         "count": 1185,
         "sum": 154873,
-        "mean": 131
+        "mean": 131,
+        "diff": 9
     },
     {
         "ang": 154,
         "count": 1200,
         "sum": 147948,
-        "mean": 123
+        "mean": 123,
+        "diff": 15
     },
     {
         "ang": 156,
         "count": 1203,
         "sum": 140953,
-        "mean": 117
+        "mean": 117,
+        "diff": 19
     },
     {
         "ang": 158,
         "count": 1178,
         "sum": 138388,
-        "mean": 117
+        "mean": 117,
+        "diff": 17
     },
     {
         "ang": 160,
         "count": 1202,
         "sum": 141395,
-        "mean": 118
+        "mean": 118,
+        "diff": 14
     },
     {
         "ang": 162,
         "count": 1156,
         "sum": 134382,
-        "mean": 116
+        "mean": 116,
+        "diff": 14
     },
     {
         "ang": 164,
         "count": 1202,
         "sum": 141201,
-        "mean": 117
+        "mean": 117,
+        "diff": 12
     },
     {
         "ang": 166,
         "count": 1182,
         "sum": 136765,
-        "mean": 116
+        "mean": 116,
+        "diff": 12
     },
     {
         "ang": 168,
         "count": 1206,
         "sum": 139797,
-        "mean": 116
+        "mean": 116,
+        "diff": 11
     },
     {
         "ang": 170,
         "count": 1198,
         "sum": 140246,
-        "mean": 117
+        "mean": 117,
+        "diff": 9
     },
     {
         "ang": 172,
         "count": 1201,
         "sum": 138308,
-        "mean": 115
+        "mean": 115,
+        "diff": 10
     },
     {
         "ang": 174,
         "count": 1214,
         "sum": 141088,
-        "mean": 116
+        "mean": 116,
+        "diff": 9
     },
     {
         "ang": 176,
         "count": 1230,
         "sum": 143035,
-        "mean": 116
+        "mean": 116,
+        "diff": 8
     },
     {
         "ang": 178,
         "count": 1217,
         "sum": 144177,
-        "mean": 118
+        "mean": 118,
+        "diff": 6
     },
     {
         "ang": 180,
         "count": 529,
         "sum": 63993,
-        "mean": 121
+        "mean": 121,
+        "diff": 3
     }
 ]
